@@ -1,0 +1,665 @@
+TLayoutViewExample
+v6
+r1
+cCheck dependencies
+cProcessPCH /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample normal i386
+cLd /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample normal x86_64
+cCreateUniversalBinary /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample normal i386\ x86_64
+cCopyStringsFile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj/InfoPlist.strings LayoutViewExample/en.lproj/InfoPlist.strings
+cCompileStoryboard /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Base.lproj/Main.storyboard
+cCompileAssetCatalog /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Images.xcassets
+cProcessInfoPlistFile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist
+cGenerateDSYMFile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample
+cTouch /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c00000000534895FF0000000000000198
+t1397265919
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c000000005321613E00000000000003B4
+t1394696510
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000053216148000000000000019E
+t1394696520
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000534895E00000000000446820
+t1397265888
+s4483104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005321614C000000000088D8C0
+t1394696524
+s8968384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000532161540000000001F1DE10
+t1394696532
+s32628240
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/include/module.map
+c00000000532161770000000000000ADC
+t1394696567
+s2780
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o
+t1398669261
+s61660
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample
+t1398669261
+s61740
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample.LinkFileList
+c00000000535DFFCB0000000000000350
+t1398669259
+s848
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o
+t1398669261
+s112404
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o
+t1398669261
+s44036
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o
+t1398669261
+s52948
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o
+t1398669261
+s3564
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o
+t1398669261
+s68264
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample
+t1398669261
+s68232
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample.LinkFileList
+c00000000535DFFCB000000000000035A
+t1398669259
+s858
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o
+t1398669261
+s130848
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o
+t1398669261
+s46128
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o
+t1398669261
+s55860
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o
+t1398669261
+s4012
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_dependencies.txt
+t1398669263
+s435
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_generated_info.plist
+t1398669263
+s525
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch
+t1398669261
+s117080
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch
+t1398669261
+s116324
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app
+t1398669263
+s306
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM
+t2
+s0
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Base.lproj/Main.storyboardc
+t1398669263
+s170
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist
+t1398669263
+s1045
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample
+t1398669261
+s137864
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/PkgInfo
+t1398669263
+s8
+
+N/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj/InfoPlist.strings
+t1398669261
+s42
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m
+c000000005354C56F00000000000007DF
+t1398064495
+s2015
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Base.lproj/Main.storyboard
+c00000000535779590000000000000B25
+t1398241625
+s2853
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Images.xcassets
+c000000005354C56F0000000000000088
+t1398064495
+s136
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist
+c000000005354C56F00000000000004C7
+t1398064495
+s1223
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch
+c000000005354C56F0000000000000158
+t1398064495
+s344
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m
+c00000000535DFF8D000000000000381C
+t1398669197
+s14364
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m
+c000000005357AE8600000000000003E8
+t1398255238
+s1000
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m
+c00000000535CE4AD00000000000005A2
+t1398596781
+s1442
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/en.lproj/InfoPlist.strings
+c000000005354C56F000000000000002D
+t1398064495
+s45
+
+N/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m
+c000000005354C56F0000000000000159
+t1398064495
+s345
+
+CBuild AST from /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m
+r0
+
+CBuild AST from /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m
+r0
+
+CBuild AST from /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m
+r0
+
+CBuild AST from /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m
+r0
+
+CBuild AST from /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese337a54b370eb941^86cbba4b370eb941^---0#1#1#--18"Check dependencies36"4BF747A5-01DE-412F-BD5B-01309817570E-
+
+CCompileAssetCatalog /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Images.xcassets
+s420362061.543000
+e420362063.427395
+r1
+xCompileAssetCatalog
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Images.xcassets
+o/* com.apple.actool.compilation-results */
+o/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LaunchImage-700-568h@2x.png
+o/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Assets.car
+o/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"CompileAssetCatalog Build/Products/Release-iphonesimulator/LayoutViewExample.app LayoutViewExample/Images.xcassets114"CompileAssetCatalog Build/Products/Release-iphonesimulator/LayoutViewExample.app LayoutViewExample/Images.xcassets45108b4d370eb941^cf6a6d4f370eb941^-463"/* com.apple.actool.compilation-results *//Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LaunchImage-700-568h@2x.png/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Assets.car/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@85"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Images.xcassets/0000000000000000^1251"CompileAssetCatalog Build/Products/Release-iphonesimulator/LayoutViewExample.app LayoutViewExample/Images.xcassets    cd /Volumes/DataHD/workspace/LayoutViewExample    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_dependencies.txt --output-partial-info-plist /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --platform iphonesimulator --minimum-deployment-target 7.1 --target-device iphone --compress-pngs --compile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Images.xcassets36"50042EA3-E163-409D-A8CA-3912938DD5E6-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.098172
+e420362061.226038
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m234"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o LayoutViewExample/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4548194d370eb941^c1e1394d370eb941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m0000000000000000^4060"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o LayoutViewExample/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/i386 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o36"05644910-7ABC-4AEB-8868-446D99842603-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.097379
+e420362061.412554
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m236"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o LayoutViewExample/TXLayoutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1805194d370eb941^3c9f694d370eb941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m0000000000000000^4066"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o LayoutViewExample/TXLayoutView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/i386 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o36"CA1AE098-AF0B-4CFE-A207-8BA1D2C1389E-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.097801
+e420362061.229815
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.h
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.h
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m240"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o LayoutViewExample/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerbb25194d370eb941^28d53a4d370eb941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m0000000000000000^4078"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o LayoutViewExample/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/i386 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o36"A21D016B-8E7A-4C54-8670-41A2F5239DEC-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.097129
+e420362061.268308
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.h
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m236"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o LayoutViewExample/YourInfoView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler84f4184d370eb941^36b1444d370eb941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m0000000000000000^4066"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o LayoutViewExample/YourInfoView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/i386 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o36"69E4F230-53BA-4F20-9A99-C0B608BEE637-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.098667
+e420362061.206665
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m220"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o LayoutViewExample/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6360194d370eb941^fbe8344d370eb941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m0000000000000000^4018"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o LayoutViewExample/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/i386 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o36"51BADCD6-871E-4F70-AD12-89F9494D6461-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.207391
+e420362061.301871
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m238"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o LayoutViewExample/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerac3c354d370eb941^5e4a4d4d370eb941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m0000000000000000^4074"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o LayoutViewExample/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/x86_64 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o36"8A2FE1DC-86D9-48DB-85A2-382AD5528324-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.099740
+e420362061.393929
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m240"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o LayoutViewExample/TXLayoutView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler5cca194d370eb941^a1da644d370eb941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m0000000000000000^4080"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o LayoutViewExample/TXLayoutView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/x86_64 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o36"A0A57220-6637-4D77-B8E9-CD3475D412C7-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.100319
+e420362061.229658
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.h
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.h
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m244"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o LayoutViewExample/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler3ace194d370eb941^86cb3a4d370eb941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m0000000000000000^4092"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o LayoutViewExample/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/x86_64 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/ViewController.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o36"44D158A3-4567-4592-81AE-428D5F08E095-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.099258
+e420362061.272022
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.h
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/TXLayoutView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m240"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o LayoutViewExample/YourInfoView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler4296194d370eb941^f4a3454d370eb941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m0000000000000000^4080"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o LayoutViewExample/YourInfoView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/x86_64 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/YourInfoView.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o36"5A5BEAB8-2FE1-490A-B82A-1CB3148FCEBE-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362061.226364
+e420362061.281188
+r1
+xCompileC
+xBuild/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m224"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o LayoutViewExample/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerba153a4d370eb941^33fc474d370eb941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m0000000000000000^4032"CompileC Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o LayoutViewExample/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/x86_64 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -include /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.dia -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/main.m -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o36"EA9597EC-3892-46C1-9167-518CB24A87F2-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCompileStoryboard /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Base.lproj/Main.storyboard
+s420362061.542693
+e420362063.649030
+r1
+xCompileStoryboard
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Base.lproj/Main.storyboard
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"CompileStoryboard LayoutViewExample/Base.lproj/Main.storyboard62"CompileStoryboard LayoutViewExample/Base.lproj/Main.storyboarda4fe8a4d370eb941^bf27a64f370eb941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Base.lproj/Main.storyboard0000000000000000^886"CompileStoryboard LayoutViewExample/Base.lproj/Main.storyboard    cd /Volumes/DataHD/workspace/LayoutViewExample    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Base.lproj/Main.storyboardc /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/Base.lproj/Main.storyboard36"23E8742E-3A5D-4814-9AE9-6CABA9269080-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCopyStringsFile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj/InfoPlist.strings LayoutViewExample/en.lproj/InfoPlist.strings
+s420362061.542484
+e420362061.568608
+r1
+xCopyStringsFile
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj/InfoPlist.strings
+xLayoutViewExample/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy LayoutViewExample/en.lproj/InfoPlist.strings148"CopyStringsFile Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj/InfoPlist.strings LayoutViewExample/en.lproj/InfoPlist.strings83c38b4d370eb941^6891914d370eb941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/en.lproj/InfoPlist.strings0000000000000000^647"CopyStringsFile Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj/InfoPlist.strings LayoutViewExample/en.lproj/InfoPlist.strings    cd /Volumes/DataHD/workspace/LayoutViewExample    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/en.lproj -- LayoutViewExample/en.lproj/InfoPlist.strings36"FACDA244-9E7F-4961-A984-6510CA85AB9C-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CCreateUniversalBinary /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample normal i386\ x86_64
+s420362061.534010
+e420362061.542009
+r1
+xCreateUniversalBinary
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample
+xnormal
+xi386 x86_64
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection146"Create universal binary /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample120"CreateUniversalBinary Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample normal i386\ x86_64e2e6884d370eb941^5bd18a4d370eb941^---0#0#1#-19%DVTDocumentLocation2@129"file:///Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample0034a0d0ddffdf42^952"CreateUniversalBinary Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample normal i386\ x86_64    cd /Volumes/DataHD/workspace/LayoutViewExample    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample -output /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample36"AA96650D-80EA-446D-872B-2827588D24F5-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CGenerateDSYMFile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample
+s420362063.653592
+e420362063.682290
+r1
+xGenerateDSYMFile
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Generate /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM161"GenerateDSYMFile Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample705fa74f370eb941^deabae4f370eb941^---0#0#1#-19%DVTDocumentLocation2@116"file:///Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM0034a0d0ddffdf42^744"GenerateDSYMFile Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample    cd /Volumes/DataHD/workspace/LayoutViewExample    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/LayoutViewExample -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app.dSYM36"D6EB5CFE-317F-4352-A6BC-B16F62F330E8-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CLd /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample normal i386
+s420362061.414302
+e420362061.533084
+r1
+xLd
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample
+xnormal
+xi386
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/YourInfoView.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/TXLayoutView.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/ViewController.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/AppDelegate.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/main.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection178"Link /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample144"Ld Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample normal i38676346a4d370eb941^ea78884d370eb941^---0#0#1#--1633"Ld Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample normal i386    cd /Volumes/DataHD/workspace/LayoutViewExample    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -filelist /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample_dependency_info.dat -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/i386/LayoutViewExample36"4429F2B2-629E-449F-A559-EC1B2B7D7E8A-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CLd /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample normal x86_64
+s420362061.415096
+e420362061.452916
+r1
+xLd
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample
+xnormal
+xx86_64
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/YourInfoView.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/TXLayoutView.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/ViewController.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/AppDelegate.o
+d/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/main.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libsystem_stats.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection180"Link /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample148"Ld Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample normal x86_64c2516a4d370eb941^9df3734d370eb941^---0#0#1#--1645"Ld Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample normal x86_64    cd /Volumes/DataHD/workspace/LayoutViewExample    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator -filelist /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample_dependency_info.dat -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/Objects-normal/x86_64/LayoutViewExample36"0A4E141E-E8F1-43C9-A420-F9CAECDE53B3-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CProcessInfoPlistFile /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist
+s420362063.649634
+e420362063.653074
+r1
+xProcessInfoPlistFile
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist
+x/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Process /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist139"ProcessInfoPlistFile Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist LayoutViewExample/LayoutViewExample-Info.plistd061a64f370eb941^1233a74f370eb941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist0000000000000000^1005"ProcessInfoPlistFile Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist LayoutViewExample/LayoutViewExample-Info.plist    cd /Volumes/DataHD/workspace/LayoutViewExample    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Info.plist -genpkginfo /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/assetcatalog_generated_info.plist -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app/Info.plist36"C614983A-58A8-4198-A301-F35B189F02E6-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CProcessPCH /Users/eunmin/Library/Developer/Xcode/DerivedData/LayoutViewExample-btkkyqvqjwodzaebsthxkhyownzt/Index/PrecompiledHeaders/LayoutViewExample-Prefix-ckxmymrznwzpcxhjgnjaijqcehue_ast/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/eunmin/Library/Developer/Xcode/DerivedData/LayoutViewExample-btkkyqvqjwodzaebsthxkhyownzt/Index/PrecompiledHeaders/LayoutViewExample-Prefix-fvyzxrimdfwlbgafopwwmwcqscbm_ast/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362059.731295
+e420362061.096153
+r1
+xProcessPCH
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch
+xLayoutViewExample/LayoutViewExample-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Precompile LayoutViewExample/LayoutViewExample-Prefix.pch253"ProcessPCH Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler514bbb4b370eb941^90a0184d370eb941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch0000000000000000^3926"ProcessPCH Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/x86_64 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.dia -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.d -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-akophumsyffabeeuedbpnimmpkjm/LayoutViewExample-Prefix.pch.pch36"97C2DCBB-802C-48E2-B425-03A87C9640E4-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CProcessPCH /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s420362059.731047
+e420362061.096361
+r1
+xProcessPCH
+x/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch
+xLayoutViewExample/LayoutViewExample-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Precompile LayoutViewExample/LayoutViewExample-Prefix.pch251"ProcessPCH Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler7d3dbb4b370eb941^ebaa184d370eb941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch0000000000000000^3920"ProcessPCH Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch LayoutViewExample/LayoutViewExample-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Volumes/DataHD/workspace/LayoutViewExample    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/eunmin/Library/Developer/Xcode/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DNS_BLOCK_ASSERTIONS=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-generated-files.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-own-target-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-all-target-headers.hmap -iquote /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/LayoutViewExample-project-headers.hmap -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources/i386 -I/Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/LayoutViewExample.build/Release-iphonesimulator/LayoutViewExample.build/DerivedSources -F/Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator --serialize-diagnostics /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.dia -MMD -MT dependencies -MF /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.d -c /Volumes/DataHD/workspace/LayoutViewExample/LayoutViewExample/LayoutViewExample-Prefix.pch -o /Volumes/DataHD/workspace/LayoutViewExample/Build/Intermediates/PrecompiledHeaders/LayoutViewExample-Prefix-dlthjwoxmykeupdzdwxfgqnlcbqu/LayoutViewExample-Prefix.pch.pch36"EA009D2F-251A-4AC3-AD03-A8D1738E3DE6-
+b25134F75-D109-49F9-B45A-12EF708784C8
+
+CTouch /Volumes/DataHD/workspace/LayoutViewExample/Build/Products/Release-iphonesimulator/LayoutViewExample.app
+r0
+

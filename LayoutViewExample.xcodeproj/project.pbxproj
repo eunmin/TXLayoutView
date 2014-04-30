@@ -21,6 +21,10 @@
 		2E1486311904FCF000CDBA9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1486131904FCEF00CDBA9C /* UIKit.framework */; };
 		2E1486391904FCF000CDBA9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E1486371904FCF000CDBA9C /* InfoPlist.strings */; };
 		2E14863B1904FCF000CDBA9C /* LayoutViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14863A1904FCF000CDBA9C /* LayoutViewExampleTests.m */; };
+		2E14864D190505B200CDBA9C /* YourInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E14864C190505B200CDBA9C /* YourInfoView.m */; };
+		2E3B0184190D1B5A00660926 /* TXLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B0183190D1B5A00660926 /* TXLayoutView.m */; };
+		2E3B01861910CF1A00660926 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3B01851910CF1A00660926 /* sample.png */; };
+		2E3B01881910D4B600660926 /* eunmin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E3B01871910D4B600660926 /* eunmin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		2E1486361904FCF000CDBA9C /* LayoutViewExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LayoutViewExampleTests-Info.plist"; sourceTree = "<group>"; };
 		2E1486381904FCF000CDBA9C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2E14863A1904FCF000CDBA9C /* LayoutViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayoutViewExampleTests.m; sourceTree = "<group>"; };
+		2E14864B190505B200CDBA9C /* YourInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourInfoView.h; sourceTree = "<group>"; };
+		2E14864C190505B200CDBA9C /* YourInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourInfoView.m; sourceTree = "<group>"; };
+		2E3B0182190D1B5A00660926 /* TXLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXLayoutView.h; sourceTree = "<group>"; };
+		2E3B0183190D1B5A00660926 /* TXLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXLayoutView.m; sourceTree = "<group>"; };
+		2E3B01851910CF1A00660926 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+		2E3B01871910D4B600660926 /* eunmin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eunmin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 		2E1486151904FCEF00CDBA9C /* LayoutViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				2E1486441904FCF700CDBA9C /* LayoutView */,
 				2E14861E1904FCEF00CDBA9C /* AppDelegate.h */,
 				2E14861F1904FCEF00CDBA9C /* AppDelegate.m */,
 				2E1486211904FCEF00CDBA9C /* Main.storyboard */,
@@ -126,6 +137,8 @@
 		2E1486161904FCEF00CDBA9C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2E3B01871910D4B600660926 /* eunmin.png */,
+				2E3B01851910CF1A00660926 /* sample.png */,
 				2E1486171904FCEF00CDBA9C /* LayoutViewExample-Info.plist */,
 				2E1486181904FCEF00CDBA9C /* InfoPlist.strings */,
 				2E14861B1904FCEF00CDBA9C /* main.m */,
@@ -150,6 +163,17 @@
 				2E1486371904FCF000CDBA9C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E1486441904FCF700CDBA9C /* LayoutView */ = {
+			isa = PBXGroup;
+			children = (
+				2E3B0182190D1B5A00660926 /* TXLayoutView.h */,
+				2E3B0183190D1B5A00660926 /* TXLayoutView.m */,
+				2E14864B190505B200CDBA9C /* YourInfoView.h */,
+				2E14864C190505B200CDBA9C /* YourInfoView.m */,
+			);
+			name = LayoutView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1486281904FCEF00CDBA9C /* Images.xcassets in Resources */,
+				2E3B01881910D4B600660926 /* eunmin.png in Resources */,
+				2E3B01861910CF1A00660926 /* sample.png in Resources */,
 				2E14861A1904FCEF00CDBA9C /* InfoPlist.strings in Resources */,
 				2E1486231904FCEF00CDBA9C /* Main.storyboard in Resources */,
 			);
@@ -249,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E14864D190505B200CDBA9C /* YourInfoView.m in Sources */,
+				2E3B0184190D1B5A00660926 /* TXLayoutView.m in Sources */,
 				2E1486261904FCEF00CDBA9C /* ViewController.m in Sources */,
 				2E1486201904FCEF00CDBA9C /* AppDelegate.m in Sources */,
 				2E14861C1904FCEF00CDBA9C /* main.m in Sources */,
@@ -456,6 +484,7 @@
 				2E1486401904FCF000CDBA9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E1486411904FCF000CDBA9C /* Build configuration list for PBXNativeTarget "LayoutViewExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +493,7 @@
 				2E1486431904FCF000CDBA9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
