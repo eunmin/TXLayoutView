@@ -1,48 +1,24 @@
-//
-//  YourInfoView.m
-//  LayoutViewExample
-//
-//  Created by eunmin on 2014. 4. 21..
-//  Copyright (c) 2014년 lab335. All rights reserved.
-//
-
 #import "YourInfoView.h"
-
-@interface YourInfoView()
-
-@end
 
 @implementation YourInfoView
 
 deflayout
-    layout(orientation = "virtical", width = "match_parent", height = 200)
-        label(width = "wrap_content", height = 50, text = @nickname)
-        layout(orientation = "horizontal", width = "match_parent", height = "wrap_content", background = "sample.png")
+    virtical_layout(ref = @mainView, width = "match_parent", height = "wrap_content")
+        horizontal_layout(width = "match_parent", height = "wrap_content", align = "center")
+            label(ref = @titleLabel, width = "wrap_content", height = 50, text = @nickname, marginLeft = 10, hidden = @isShow)
+        endlayout
+        horizontal_layout(width = "match_parent", height = "wrap_content", background = "sample.png", align = "center")
             label(width = @width, height = 50, text = "cccc")
-            label(width = "wrap_content", height = "wrap_content", text = "111111")
+            label(width = "wrap_content", height = "wrap_content", text = "111111", marginLeft = 20, marginBottom = 10)
         endlayout
         label(width = "wrap_content", height = "wrap_content", text = "dddddd")
-        label(width = "match_parent", height = "wrap_content", text = "ttt")
-        label(width = "wrap_content", height = 50, text = "123123")
+        horizontal_layout(width = "match_parent", height = "wrap_content", align = "right")
+            label(width = "wrap_content", height = "wrap_content", text = "ttt")
+            label(width = "wrap_content", height = "wrap_content", text = "123123", marginLeft = 50, marginTop = 10, marginRight = 5)
+        endlayout
         button(ref = @button1, width = "match_parent", height = 30, text = "테스트1")
-        button(ref = @button2, width = "match_parent", height = 30, text = "테스트2", background = "eunmin.png")
+        button(ref = @button2, width = "match_parent", height = 30, text = "테스트2", background = "eunmin.png", marginTop = 10)
     endlayout
 enddef
-
-
-// TODO : KVO로 리펙토링이 필요함
-- (void)setNickname:(NSString *)nickname {
-    for (id propertyView in [self viewsForProperty:@"nickname"]) {
-        [self setProperty:nickname forKey:propertyView[@"key"] to:propertyView[@"view"]];
-    }
-    [self setNeedsDisplay];
-}
-
-- (void)setWidth:(CGFloat)width {
-    for (id propertyView in [self viewsForProperty:@"width"]) {
-        [self setProperty:@(width) forKey:propertyView[@"key"] to:propertyView[@"view"]];
-    }
-    [self setNeedsDisplay];
-}
 
 @end

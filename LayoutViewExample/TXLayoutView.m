@@ -1,4 +1,5 @@
 #import <QuartzCore/QuartzCore.h>
+#import <objc/runtime.h>
 #import "TXLayoutView.h"
 
 #pragma mark - UIView Category
@@ -125,24 +126,6 @@
     [UIView resize:view size:CGSizeMake(view.frame.size.width, height)];
 }
 
-+ (void)visitPre:(void (^)(id, id))preProc post:(void (^)(id, id))postProc subviewsOf:(id)view {
-    [self visitPre:preProc post:postProc subviewsOf:view withPreviousView:nil];
-}
-
-+ (void)visitPre:(void (^)(id, id))preProc post:(void (^)(id, id))postProc subviewsOf:(id)view withPreviousView:(id)previousView {
-    if (preProc != nil) {
-        preProc(previousView, view);
-    }
-    __block id previousSubview = nil;
-    [((UIView *)view).subviews enumerateObjectsUsingBlock:^(id subview, NSUInteger idx, BOOL *stop) {
-        [self visitPre:preProc post:postProc subviewsOf:subview withPreviousView:previousSubview];
-        previousSubview = subview;
-    }];
-    if (postProc != nil) {
-        postProc(previousView, view);
-    }
-}
-
 + (void)printSubviews:(UIView *)view withTab:(NSString *)tab {
     [view.subviews enumerateObjectsUsingBlock:^(id view, NSUInteger idx, BOOL *stop) {
         NSLog(@"%@%@",tab, view);
@@ -212,6 +195,18 @@
 
 @implementation TXLayoutView
 
+- (void)didAddSubview:(UIView *)subview {
+    [super didAddSubview:subview];
+    
+    [self addObserverForAllProperties];
+}
+
+- (void)willRemoveSubview:(UIView *)subview {
+    [super willRemoveSubview:subview];
+    
+    [self removeObserverForAllProperties];
+}
+
 - (NSDictionary *)propertyViews {
     if (_propertyViews == nil) {
         _propertyViews = [[NSMutableDictionary alloc] init];
@@ -232,6 +227,10 @@
         if ([view isKindOfClass:[TXLayoutContainerView class]] && [key isEqualToString:@"ref"]) {
             TXLayoutContainerView *containerView = (TXLayoutContainerView *)view;
             [self setValue:[containerView subview] forKey:varKey];
+        }
+        else if ([view isKindOfClass:[TXLayoutLayoutView class]] && [key isEqualToString:@"ref"]) {
+            TXLayoutLayoutView *layoutView = (TXLayoutLayoutView *)view;
+            [self setValue:layoutView forKey:varKey];
         }
         else {
             [view setProperty:[self valueForKey:varKey] forKey:key];
@@ -257,50 +256,65 @@
 }
 
 - (void)draw {
-    [self reposition];
+    if ([self.subviews count] > 0) {
+        [self.subviews[0] resize];
+    }
     
     [UIView printSubviews:self withTab:@""];
 }
 
-// TODO : 리펙토링이 필요함
-- (void)reposition {
-    [UIView visitPre:^(id previousView, id view) {
-        if (![view conformsToProtocol:@protocol(TXLayoutViewPropertyProtocol)]) {
-            return;
+- (void)addObserverForAllProperties {
+    unsigned int outCount;
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    while (outCount--) {
+        objc_property_t property = properties[outCount];
+        if (![self isReadOnlyProperty:property_getAttributes(property)]) {
+            [self addObserver:self forKeyPath:[NSString stringWithFormat:@"%s", property_getName(property)] options:NSKeyValueObservingOptionNew context:nil];
         }
-        
-        CGFloat x = x((UIView *)view);
-        CGFloat y = y((UIView *)view);
-        
-        TXLayoutLayoutView *superview = (TXLayoutLayoutView *)((UIView *)view).superview;
-        
-        if ([superview respondsToSelector:@selector(property:)] &&
-            [[superview property:@"orientation"] isEqualToString:@"horizontal"]) {
-            x = right((UIView *)previousView);
+    }
+}
+
+- (BOOL)isReadOnlyProperty:(const char *)propertyAttributes {
+    NSArray *attributes = [[NSString stringWithUTF8String:propertyAttributes] componentsSeparatedByString:@","];
+    return [attributes containsObject:@"R"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    [[self viewsForProperty:keyPath] enumerateObjectsUsingBlock:^(id propertyView, NSUInteger idx, BOOL *stop) {
+        [self setProperty:change[NSKeyValueChangeNewKey] forKey:propertyView[@"key"] to:propertyView[@"view"]];
+    }];
+
+    [self setNeedsDisplay];
+}
+
+- (void)removeObserverForAllProperties {
+    unsigned int outCount;
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    while (outCount--) {
+        objc_property_t property = properties[outCount];
+        if (![self isReadOnlyProperty:property_getAttributes(property)]) {
+            [self removeObserver:self forKeyPath:[NSString stringWithFormat:@"%s", property_getName(property)] context:nil];
         }
-        else {
-            y = bottom((UIView *)previousView);
-        }
-        
-        [UIView move:view origin:CGPointMake(x, y)];
-        
-    } post:nil subviewsOf:self];
+    }
 }
 
 @end
 
 
-#pragma mark - TXLayoutAbstractView
+#pragma mark - TXLayoutContainerView
 
-@interface TXLayoutAbstractView()
+@interface TXLayoutContainerView()
 
 @property (nonatomic, strong) id width;
 @property (nonatomic, strong) id height;
-@property (nonatomic, strong) id background;
+@property (nonatomic, strong) NSNumber *marginTop;
+@property (nonatomic, strong) NSNumber *marginLeft;
+@property (nonatomic, strong) NSNumber *marginRight;
+@property (nonatomic, strong) NSNumber *marginBottom;
 
 @end
 
-@implementation TXLayoutAbstractView
+@implementation TXLayoutContainerView
 
 - (void)setWidth:(id)width {
     _width = width;
@@ -312,6 +326,131 @@
     _height = height;
     
     [self resize];
+}
+
+- (void)setMarginLeft:(NSNumber *)marginLeft {
+    _marginLeft = marginLeft;
+    
+    [self resize];
+}
+
+- (void)setMarginTop:(NSNumber *)marginTop {
+    _marginTop = marginTop;
+    
+    [self resize];
+}
+
++ (void)create:(Class)viewClass in:(id)layout return:(void (^)(id))returnBlock {
+    TXLayoutContainerView *containerView = [[TXLayoutContainerView alloc] initWithFrame:CGRectZero];
+    containerView.autoresizesSubviews = YES;
+    containerView.clipsToBounds = YES;
+    
+    // For Debug
+//    containerView.layer.borderColor = [UIColor redColor].CGColor;
+//    containerView.layer.borderWidth = 1.0f;
+    
+    UIView *view = nil;
+    
+    if (viewClass == UIButton.class) {
+        view = [UIButton buttonWithType:UIButtonTypeCustom];
+    }
+    else {
+        view = [[viewClass alloc] init];
+    }
+    
+    [containerView setSubview:view];
+   
+    if ([layout isKindOfClass:[self class]]) {
+        [[layout subview] addSubview:containerView];
+    }
+    else {
+        [layout addSubview:containerView];
+    }
+    
+    returnBlock(containerView);
+}
+
+- (void)resize {
+    [self resizeWidth];
+    [self resizeHeight];
+    
+    [UIView resize:self size:CGSizeMake(width(self) + [self horizontalMargin], height(self) + [self verticalMargin])];
+}
+
+- (void)resizeWidth {
+    if ([self.width isKindOfClass:[NSNumber class]]) {
+        [UIView resize:self width:[self.width floatValue]];
+    }
+    else if ([self.width isEqualToString:@"match_parent"]) {
+        if (self.superview) {
+            [UIView resize:self width:width(self.superview)];
+        }
+        else {
+            [UIView resize:self width:width(((UIWindow *)[UIApplication sharedApplication].windows[0]))];
+        }
+    }
+    else if ([self.width isEqualToString:@"wrap_content"]) {
+        [UIView resize:self width:[self sizeOfSubview].width];
+    }
+}
+
+- (void)resizeHeight {
+    if ([self.height isKindOfClass:[NSNumber class]]) {
+        [UIView resize:self height:[self.height floatValue]];
+    }
+    else if ([self.height isEqualToString:@"match_parent"]) {
+        if ([self.height isKindOfClass:[NSNumber class]]) {
+            [UIView resize:self height:[self.height floatValue]];
+        }
+        else {
+            [UIView resize:self height:height(((UIWindow *)[UIApplication sharedApplication].windows[0]))];
+        }
+    }
+    else if ([self.height isEqualToString:@"wrap_content"]) {
+        [UIView resize:self height:[self sizeOfSubview].height];
+    }
+}
+
+- (CGSize)sizeOfSubview {
+    CGSize size = CGSizeZero;
+    if ([self subview]) {
+        [[self subview] sizeToFit];
+        size = [self subview].frame.size;
+        [UIView resize:[self subview] size:CGSizeZero];
+    }
+    return size;
+}
+
+- (void)layoutSubviews {
+    if ([self subview]) {
+        [UIView resize:[self subview] size:CGSizeMake(width(self) - [self horizontalMargin], height(self) - [self verticalMargin])];
+        [UIView move:[self subview] origin:CGPointMake([[self marginLeft] floatValue], [[self marginTop] floatValue])];
+    }
+}
+
+- (CGFloat)horizontalMargin {
+    return [[self marginLeft] floatValue] + [[self marginRight] floatValue];
+}
+
+- (CGFloat)verticalMargin {
+    return [[self marginTop] floatValue] + [[self marginBottom] floatValue];
+}
+
+- (id)valueForUndefinedKey:(NSString *)key {
+    if ([[self subview] respondsToSelector:NSSelectorFromString(key)]) {
+        return [[self subview] valueForKey:key];
+    }
+    return nil;
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    NSString *setterStr = [NSString stringWithFormat:@"set%@%@:",
+                           [[key substringToIndex:1] capitalizedString],
+                           [key substringFromIndex:1]];
+    
+    if ([[self subview] respondsToSelector:NSSelectorFromString(setterStr)]) {
+        [[self subview] setValue:value forKey:key];
+    }
 }
 
 - (id)property:(NSString *)key {
@@ -335,113 +474,13 @@
     else {
         [self setValue:object forUndefinedKey:key];
     }
-}
-
-- (void)setBackground:(id)background {
-    _background = background;
-    
-    self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:background]];
-}
-
-- (id)valueForUndefinedKey:(NSString *)key {
-    return nil;
-}
-
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-}
-
-- (void)resize {
-    if ([self.width isKindOfClass:[NSNumber class]]) {
-        [UIView resize:self width:[self.width floatValue]];
-    }
-    else if ([self.width isEqualToString:@"match_parent"]) {
-        if (self.superview) {
-            [UIView resize:self width:width(self.superview)];
-        }
-        else {
-            [UIView resize:self width:width(((UIWindow *)[UIApplication sharedApplication].windows[0]))];
-        }
-    }
-    
-    if ([self.height isKindOfClass:[NSNumber class]]) {
-        [UIView resize:self height:[self.height floatValue]];
-    }
-    else if ([self.height isEqualToString:@"match_parent"]) {
-        if ([self.height isKindOfClass:[NSNumber class]]) {
-            [UIView resize:self height:[self.height floatValue]];
-        }
-        else if ([self.height isEqualToString:@"match_parent"]) {
-            [UIView resize:self width:height(((UIWindow *)[UIApplication sharedApplication].windows[0]))];
-        }
-    }
-    
-    [self sizeToFit];
-}
-
-@end
-
-
-#pragma mark - TXLayoutContainerView
-
-@implementation TXLayoutContainerView
-
-+ (id)create:(Class)viewClass in:(id)layout {
-    TXLayoutContainerView *containerView = [[TXLayoutContainerView alloc] initWithFrame:CGRectZero];
-    containerView.autoresizesSubviews = YES;
-    containerView.clipsToBounds = YES;
-    
-    // For Debug
-    containerView.layer.borderColor = [UIColor redColor].CGColor;
-    containerView.layer.borderWidth = 1.0f;
-    
-    UIView *view = nil;
-    
-    if (viewClass == UIButton.class) {
-        view = [UIButton buttonWithType:UIButtonTypeCustom];
-    }
-    else {
-        view = [[viewClass alloc] init];
-    }
-    
-    view.contentMode = UIViewContentModeScaleToFill;
-    
-    [containerView setSubview:view];
-   
-    [layout addSubview:containerView];
-    
-    return containerView;
-}
-
-- (id)valueForUndefinedKey:(NSString *)key {
-    if ([[self subview] respondsToSelector:NSSelectorFromString(key)]) {
-        return [[self subview] valueForKey:key];
-    }
-    return nil;
-}
-
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    NSString *setterStr = [NSString stringWithFormat:@"set%@%@:",
-                           [[key substringToIndex:1] capitalizedString],
-                           [key substringFromIndex:1]];
-    
-    if ([[self subview] respondsToSelector:NSSelectorFromString(setterStr)]) {
-        [[self subviews] setValue:value forKey:key];
-    }
-}
-
-- (void)setProperty:(id)object forKey:(NSString *)key {
-    [super setProperty:object forKey:key];
     
     if ([[self subview] isKindOfClass:UIButton.class] && [key isEqualToString:@"text"]) {
         UIButton *button = (UIButton *)[self subview];
         [button setTitle:object forState:UIControlStateNormal];
     }
     
-    [[self subview] sizeToFit];
-    
     [self resize];
-    
-    [self.superview sizeToFit];
 }
 
 - (void)setSubview:(UIView *)view {
@@ -458,73 +497,57 @@
     return [self subviews][0];
 }
 
-- (void)sizeToFit {
-    [super sizeToFit];
-    
-    if ([self.width isKindOfClass:[NSString class]] && [self.width isEqualToString:@"wrap_content"]) {
-        [UIView resize:self width:width([self subview])];
-    }
-    
-    if ([self.height isKindOfClass:[NSString class]] && [self.height isEqualToString:@"wrap_content"]) {
-        [UIView resize:self height:height([self subview])];
-    }
-
-    if ([self subview]) {
-        [UIView resize:[self subview] size:CGSizeMake(width(self), height(self))];
-    }
-}
-
 @end
+
 
 #pragma mark - TXLayoutLayoutView
 
 @interface TXLayoutLayoutView()
 
 @property (nonatomic, strong) NSString *orientation;
+@property (nonatomic, strong) NSString *align;
 
 @end
 
 @implementation TXLayoutLayoutView
 
-+ (void)createIn:(UIView *)layout returnLayout:(void (^)(id layout))returnBlock {
-    TXLayoutLayoutView *layoutView = [[TXLayoutLayoutView alloc] initWithFrame:CGRectZero];
-    
-    // For Debug
-    layoutView.layer.borderColor = [UIColor yellowColor].CGColor;
-    layoutView.layer.borderWidth = 1.0f;
-
-    [layout addSubview:layoutView];
-    
-    returnBlock(layoutView);
-}
-
-- (void)setProperty:(id)object forKey:(NSString *)key {
-    [super setProperty:object forKey:key];
-    
-    [self resize];
-}
-
 - (void)sizeToFit {
-    [super sizeToFit];
-    
-    if ([self.width isKindOfClass:[NSString class]] && [self.width isEqualToString:@"wrap_content"]) {
-        if ([[self property:@"orientation"] isEqualToString:@"virtical"]) {
-            [UIView resize:self width:[UIView maxSubviewWidth:self]];
-        }
-        else {
-            [UIView resize:self width:[UIView sumSubviewWidth:self]];
-        }
+    if ([self.orientation isEqualToString:@"horizontal"]) {
+        [UIView resize:self size:CGSizeMake([UIView sumSubviewWidth:self], [UIView maxSubviewHeight:self])];
     }
+    else {
+        [UIView resize:self size:CGSizeMake([UIView maxSubviewWidth:self], [UIView sumSubviewHeight:self])];
+    }
+}
+
+- (void)layoutSubviews {
+    __block CGFloat x = 0;
+    __block CGFloat y = 0;
     
-    if ([self.height isKindOfClass:[NSString class]] && [self.height isEqualToString:@"wrap_content"]) {
-        if ([[self property:@"orientation"] isEqualToString:@"virtical"]) {
-            [UIView resize:self height:[UIView sumSubviewHeight:self]];
+    [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+        [view resize];
+        
+        [UIView move:view origin:CGPointMake(x, y)];
+        if ([self.orientation isEqualToString:@"horizontal"]) {
+            x += width(view);
         }
         else {
-            [UIView resize:self height:[UIView maxSubviewHeight:self]];
+            y += height(view);
         }
+    }];
+    
+    if ([self.align isEqualToString:@"center"]) {
+        CGFloat paddingX = (width(self) - [UIView sumSubviewWidth:self]) / 2;
+        [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+            [UIView move:view origin:CGPointMake(x(view) + paddingX, y(view))];
+        }];
+    }
+    else if ([self.align isEqualToString:@"right"]) {
+        CGFloat paddingX = width(self) - [UIView sumSubviewWidth:self];
+        [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+            [UIView move:view origin:CGPointMake(x(view) + paddingX, y(view))];
+        }];
     }
 }
 
 @end
-

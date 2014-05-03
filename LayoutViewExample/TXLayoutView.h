@@ -10,21 +10,30 @@ return self; \
 [super drawRect:rect]; \
 [self draw]; \
 } \
+- (void)layoutSubviews { \
+[super layoutSubviews]; \
+} \
 - (void)initTXLayout { \
-id layout = self; \
+id view = self; \
 
-#define layout(args...) [TXLayoutLayoutView createIn:layout returnLayout:^(id layout){ \
-[self setProperties:[TXLayoutViewPropertyParser parse:@#args] to:layout]; \
+#define enddef } \
 
-#define view(class, args...) [self setProperties:[TXLayoutViewPropertyParser parse:@#args] to:[TXLayoutContainerView create:class in:layout]]; \
+#define layout(args...) [TXLayoutContainerView create:TXLayoutLayoutView.class in:view return:^(id view){ \
+[self setProperties:[TXLayoutViewPropertyParser parse:@#args] to:view]; \
 
 #define endlayout }]; \
 
-#define enddef } \
+#define view(class, args...) [TXLayoutContainerView create:class in:view return:^(id view){ \
+[self setProperties:[TXLayoutViewPropertyParser parse:@#args] to:view]; \
+}]; \
 
 #define label(args...) view(UILabel.class, args) \
 
 #define button(args...) view(UIButton.class, args) \
+
+#define virtical_layout(args...) layout(orientation = "virtical", args) \
+
+#define horizontal_layout(args...) layout(orientation = "horizontal", args) \
 
 
 #pragma mark - TXLayoutViewPropertyProtocol
@@ -58,10 +67,13 @@ id layout = self; \
 @end
 
 
-#pragma mark - TXLayoutAbstractView
+#pragma mark - TXLayoutContainerView
 
-@interface TXLayoutAbstractView : UIView <TXLayoutViewPropertyProtocol>
+@interface TXLayoutContainerView : UIView <TXLayoutViewPropertyProtocol>
 
+@property (nonatomic, readonly) UIView *subview;
+
++ (void)create:(Class)viewClass in:(id)layout return:(void (^)(id view))returnBlock;
 - (void)resize;
 
 @end
@@ -69,20 +81,7 @@ id layout = self; \
 
 #pragma mark - TXLayoutLayoutView
 
-@interface TXLayoutLayoutView : TXLayoutAbstractView
-
-+ (void)createIn:(id)layout returnLayout:(void (^)(id layout))returnBlock;
-
-@end
-
-
-#pragma mark - TXLayoutContainerView
-
-@interface TXLayoutContainerView : TXLayoutAbstractView
-
-@property (nonatomic, readonly) UIView *subview;
-
-+ (id)create:(Class)viewClass in:(id)layout;
+@interface TXLayoutLayoutView : UIView
 
 @end
 
