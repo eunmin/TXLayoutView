@@ -3,13 +3,14 @@
 @implementation YourInfoView
 
 deflayout
-    virtical_layout(ref = @mainView, width = "match_parent", height = "wrap_content")
-        horizontal_layout(width = "match_parent", height = "wrap_content", align = "center")
+    vertical_layout(ref = @mainView, width = "match_parent", height = "wrap_content")
+        vertical_layout(width = "match_parent", height = "wrap_content", align = "left center right center_vertical center ")
             label(ref = @titleLabel, width = "wrap_content", height = 50, text = @nickname, marginLeft = 10, hidden = @isShow)
+			label(width = 200, height = 20, text = "hi")
         endlayout
-        horizontal_layout(width = "match_parent", height = "wrap_content", background = "sample.png", align = "center")
+        horizontal_layout(width = "match_parent", height = "wrap_content", background = "sample.png", align = "right bottom center center_vertical")
             label(width = @width, height = 50, text = "cccc")
-            label(width = "wrap_content", height = "wrap_content", text = "111111", marginLeft = 20, marginBottom = 10)
+            label(width = "wrap_content", height = "wrap_content", text = "111111", marginLeft = 20)
         endlayout
         label(width = "wrap_content", height = "wrap_content", text = "dddddd")
         horizontal_layout(width = "match_parent", height = "wrap_content", align = "right")
@@ -17,8 +18,12 @@ deflayout
             label(width = "wrap_content", height = "wrap_content", text = "123123", marginLeft = 50, marginTop = 10, marginRight = 5)
         endlayout
         button(ref = @button1, width = "match_parent", height = 30, text = "테스트1")
-        button(ref = @button2, width = "match_parent", height = 30, text = "테스트2", background = "eunmin.png", marginTop = 10)
+        button(ref = @button2, width = "match_parent", height = 30, text = "테스트2", marginTop = 10)
     endlayout
 enddef
+
+- (UIColor *)bgColor {
+    return [UIColor redColor];
+}
 
 @end

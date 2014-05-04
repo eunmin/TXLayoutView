@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CA8E2A43-A140-4D26-A6D0-C12122A414D3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LayoutViewExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B10825A1-30D1-417C-9FFB-359843940D49</key>
+		<string>http://project.lab335.com/eunmin/TXLayoutView</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LayoutViewExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B10825A1-30D1-417C-9FFB-359843940D49</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://project.lab335.com/eunmin/TXLayoutView</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B10825A1-30D1-417C-9FFB-359843940D49</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B10825A1-30D1-417C-9FFB-359843940D49</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TXLayoutView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

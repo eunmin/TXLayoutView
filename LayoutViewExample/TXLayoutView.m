@@ -78,6 +78,8 @@
 
 + (void)printSubviews:(UIView *)view withTab:(NSString *)tab;
 
+
+
 @end
 
 @implementation UIView (TXLayout)
@@ -131,6 +133,21 @@
         NSLog(@"%@%@",tab, view);
         [UIView printSubviews:view withTab:[tab stringByAppendingString:@"\t"]];
     }];
+}
+
++ (CGSize)sizeBySizeToFit:(UIView *)view {
+    if (view == nil) {
+        return CGSizeZero;
+    }
+    
+    CGRect frame = view.frame;
+    CGSize size = CGSizeZero;
+    
+    [view sizeToFit];
+    size = view.frame.size;
+    view.frame = frame;
+    
+    return size;
 }
 
 @end
@@ -207,6 +224,14 @@
     [self removeObserverForAllProperties];
 }
 
+- (void)sizeToFit {
+    [super sizeToFit];
+    
+    [UIView resize:self width:[UIView sizeBySizeToFit:[self.subviews firstObject]].width];
+    [UIView resize:self height:[UIView sizeBySizeToFit:[self.subviews firstObject]].height];
+    
+}
+
 - (NSDictionary *)propertyViews {
     if (_propertyViews == nil) {
         _propertyViews = [[NSMutableDictionary alloc] init];
@@ -257,7 +282,7 @@
 
 - (void)draw {
     if ([self.subviews count] > 0) {
-        [self.subviews[0] resize];
+        [[self.subviews firstObject] resize];
     }
     
     [UIView printSubviews:self withTab:@""];
@@ -283,7 +308,7 @@
     [[self viewsForProperty:keyPath] enumerateObjectsUsingBlock:^(id propertyView, NSUInteger idx, BOOL *stop) {
         [self setProperty:change[NSKeyValueChangeNewKey] forKey:propertyView[@"key"] to:propertyView[@"view"]];
     }];
-
+    
     [self setNeedsDisplay];
 }
 
@@ -344,10 +369,12 @@
     TXLayoutContainerView *containerView = [[TXLayoutContainerView alloc] initWithFrame:CGRectZero];
     containerView.autoresizesSubviews = YES;
     containerView.clipsToBounds = YES;
+    containerView.width = @"wrap_content";
+    containerView.height = @"wrap_content";
     
     // For Debug
-//    containerView.layer.borderColor = [UIColor redColor].CGColor;
-//    containerView.layer.borderWidth = 1.0f;
+    //    containerView.layer.borderColor = [UIColor redColor].CGColor;
+    //    containerView.layer.borderWidth = 1.0f;
     
     UIView *view = nil;
     
@@ -359,7 +386,7 @@
     }
     
     [containerView setSubview:view];
-   
+    
     if ([layout isKindOfClass:[self class]]) {
         [[layout subview] addSubview:containerView];
     }
@@ -374,6 +401,10 @@
     [self resizeWidth];
     [self resizeHeight];
     
+    [self resizeWithMargin];
+}
+
+- (void)resizeWithMargin {
     [UIView resize:self size:CGSizeMake(width(self) + [self horizontalMargin], height(self) + [self verticalMargin])];
 }
 
@@ -390,7 +421,7 @@
         }
     }
     else if ([self.width isEqualToString:@"wrap_content"]) {
-        [UIView resize:self width:[self sizeOfSubview].width];
+        [UIView resize:self width:[UIView sizeBySizeToFit:[self subview]].width];
     }
 }
 
@@ -407,18 +438,8 @@
         }
     }
     else if ([self.height isEqualToString:@"wrap_content"]) {
-        [UIView resize:self height:[self sizeOfSubview].height];
+        [UIView resize:self height:[UIView sizeBySizeToFit:[self subview]].height];
     }
-}
-
-- (CGSize)sizeOfSubview {
-    CGSize size = CGSizeZero;
-    if ([self subview]) {
-        [[self subview] sizeToFit];
-        size = [self subview].frame.size;
-        [UIView resize:[self subview] size:CGSizeZero];
-    }
-    return size;
 }
 
 - (void)layoutSubviews {
@@ -481,6 +502,8 @@
     }
     
     [self resize];
+    
+    [self setNeedsDisplay];
 }
 
 - (void)setSubview:(UIView *)view {
@@ -536,18 +559,75 @@
         }
     }];
     
-    if ([self.align isEqualToString:@"center"]) {
-        CGFloat paddingX = (width(self) - [UIView sumSubviewWidth:self]) / 2;
-        [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
-            [UIView move:view origin:CGPointMake(x(view) + paddingX, y(view))];
-        }];
-    }
-    else if ([self.align isEqualToString:@"right"]) {
-        CGFloat paddingX = width(self) - [UIView sumSubviewWidth:self];
-        [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
-            [UIView move:view origin:CGPointMake(x(view) + paddingX, y(view))];
-        }];
-    }
+    [self applyAlign];
+}
+
+- (void)applyAlign {
+    NSArray *aligns = [self.align componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    __block BOOL isAppliedVerticalAlign = NO;
+    __block BOOL isAppliedHorizontalAlign = NO;
+    
+    [aligns enumerateObjectsUsingBlock:^(NSString *align, NSUInteger idx, BOOL *stop) {
+        if ([align isEqualToString:@"center"] && !isAppliedHorizontalAlign) {
+            [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+                CGFloat paddingX;
+                if ([self.orientation isEqualToString:@"vertical"]) {
+                    paddingX = (width(self) - width(view)) / 2;
+                }
+                else {
+                    paddingX = (width(self) - [UIView sumSubviewWidth:self]) / 2;
+                }
+                [UIView move:view origin:CGPointMake(x(view) + paddingX, y(view))];
+            }];
+            isAppliedHorizontalAlign = YES;
+        }
+        else if ([align isEqualToString:@"right"] && !isAppliedHorizontalAlign) {
+            [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+                CGFloat paddingX;
+                if ([self.orientation isEqualToString:@"vertical"]) {
+                    paddingX = width(self) - width(view);
+                }
+                else {
+                    paddingX = width(self) - [UIView sumSubviewWidth:self];
+                }
+                [UIView move:view origin:CGPointMake(x(view) + paddingX, y(view))];
+            }];
+            isAppliedHorizontalAlign = YES;
+        }
+        else if ([align isEqualToString:@"center_vertical"] && !isAppliedVerticalAlign) {
+            [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+                CGFloat paddingY;
+                if ([self.orientation isEqualToString:@"horizontal"]) {
+                    paddingY = (height(self) - height(view)) / 2;
+                }
+                else {
+                    paddingY = (height(self) - [UIView sumSubviewHeight:self]) / 2;
+                }
+                [UIView move:view origin:CGPointMake(x(view), y(view) + paddingY)];
+            }];
+            isAppliedVerticalAlign = YES;
+        }
+        else if ([align isEqualToString:@"bottom"] && !isAppliedVerticalAlign) {
+            [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+                CGFloat paddingY;
+                if ([self.orientation isEqualToString:@"horizontal"]) {
+                    paddingY = height(self) - height(view);
+                }
+                else {
+                    paddingY = height(self) - [UIView sumSubviewHeight:self];
+                }
+                [UIView move:view origin:CGPointMake(x(view), y(view) + paddingY)];
+            }];
+            isAppliedVerticalAlign = YES;
+        }
+        else if ([align isEqualToString:@"left"] && !isAppliedHorizontalAlign) {
+            isAppliedHorizontalAlign = YES;
+        }
+        else if ([align isEqualToString:@"top"] && !isAppliedVerticalAlign) {
+            isAppliedVerticalAlign = YES;
+        }
+    }];
 }
 
 @end

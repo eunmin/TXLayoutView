@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.yourInfoView = [[YourInfoView alloc] initWithFrame:CGRectMake(0, 20, 310, 320)];
+    self.yourInfoView = [[YourInfoView alloc] initWithFrame:CGRectMake(0, 20, 320, 320)];
     _yourInfoView.backgroundColor = [UIColor lightGrayColor];
     _yourInfoView.nickname = @"기본값";
     _yourInfoView.width = 50;
@@ -34,6 +34,7 @@
     [_yourInfoView.button2 addTarget:self action:@selector(clickButton2:) forControlEvents:UIControlEventTouchUpInside];
     [_yourInfoView.button1 addTarget:self action:@selector(clickButton1:) forControlEvents:UIControlEventTouchUpInside];
 
+//    [_yourInfoView sizeToFit];
     [self.view addSubview:_yourInfoView];
     
 //    NSLog(@"main view : %@", _yourInfoView.mainView);

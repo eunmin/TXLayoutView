@@ -31,7 +31,9 @@ id view = self; \
 
 #define button(args...) view(UIButton.class, args) \
 
-#define virtical_layout(args...) layout(orientation = "virtical", args) \
+#define image(args...) view(UIImageView.class, args) \
+
+#define vertical_layout(args...) layout(orientation = "vertical", args) \
 
 #define horizontal_layout(args...) layout(orientation = "horizontal", args) \
 
