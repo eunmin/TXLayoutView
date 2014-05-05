@@ -3,8 +3,8 @@
 @implementation YourInfoView
 
 deflayout
-    vertical_layout(ref : @"@mainView", width : @"match_parent", height : @"wrap_content")
-        vertical_layout(width : @"match_parent", height : @"wrap_content", align : @"left center right center_vertical center ")
+    vertical_layout(ref : @"@mainView", width : @"wrap_content", height : @"wrap_content")
+        vertical_layout(width : @"wrap_content", height : @"wrap_content", align : @"left center right center_vertical center ")
             label(ref : @"@titleLabel", width : @"wrap_content", height : @(50), @"text" : @"@nickname", marginLeft : @(10), @"hidden" : @"@isShow")
             label(width : @(200), height : @(20), @"text" : @"hi")
         endlayout

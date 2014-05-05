@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 static const NSString *ref = @"ref";
 static const NSString *width = @"width";
@@ -10,30 +11,30 @@ static const NSString *marginRight = @"marginRight";
 static const NSString *marginBottom = @"marginBottom";
 
 #define deflayout \
-- (id)initWithFrame:(CGRect)rect { \
-self = [super initWithFrame:rect]; \
-if(self) { [self initTXLayout]; } \
-return self; \
+- (void)didAddSubview:(UIView *)subview { \
+    [super didAddSubview:subview]; \
+    [TXLayoutViewProperty addObserverForAllProperties:self]; \
 } \
-- (void)drawRect:(CGRect)rect { \
-[super drawRect:rect]; \
-[self draw]; \
-} \
-- (void)layoutSubviews { \
-[super layoutSubviews]; \
+- (void)willRemoveSubview:(UIView *)subview { \
+    [super willRemoveSubview:subview]; \
+    [TXLayoutViewProperty removeObserverForAllProperties:self]; \
 } \
 - (void)initTXLayout { \
-id view = self; \
+    id view = self.subview; \
 
-#define enddef } \
+#define enddef \
+} \
 
-#define layout(args...) [TXLayoutContainerView create:TXLayoutLayoutView.class in:view return:^(id view){ \
-[self setProperties:@{args} to:view]; \
+#define layout(args...) \
+[TXLayoutContainerView create:TXLayoutLayoutView.class in:view return:^(id view){ \
+    [TXLayoutViewProperty setProperties:@{args} to:view context:self]; \
 
-#define endlayout }]; \
+#define endlayout \
+}]; \
 
-#define view(class, args...) [TXLayoutContainerView create:class in:view return:^(id view){ \
-[self setProperties:@{args} to:view]; \
+#define view(class, args...) \
+[TXLayoutContainerView create:class in:view return:^(id view){ \
+    [TXLayoutViewProperty setProperties:@{args} to:view context:self]; \
 }]; \
 
 #define label(args...) view(UILabel.class, args) \
@@ -53,18 +54,19 @@ id view = self; \
 
 - (id)property:(NSString *)key;
 - (void)setProperty:(id)object forKey:(NSString *)key;
+- (NSMutableDictionary *)propertyViews;
 
 @end
 
 
-#pragma mark - TXLayoutView
+#pragma mark - TXLayoutViewProperty
 
-@interface TXLayoutView : UIView
+@interface TXLayoutViewProperty : NSObject
 
-- (void)setProperties:(NSDictionary *)properties to:(id)view;
-- (void)setProperty:(id)object forKey:(NSString *)key to:(id<TXLayoutViewPropertyProtocol>)view;
-- (NSArray *)viewsForProperty:(NSString *)key;
-- (void)draw;
++ (void)setProperties:(NSDictionary *)properties to:(id)view context:(id)context;
++ (void)setProperty:(id)object forKey:(NSString *)key to:(id<TXLayoutViewPropertyProtocol>)view context:(id)context;
++ (void)addObserverForAllProperties:(NSObject *)observer;
++ (void)removeObserverForAllProperties:(NSObject *)observer;
 
 @end
 

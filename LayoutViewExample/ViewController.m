@@ -9,6 +9,24 @@
 #import "ViewController.h"
 #import "YourInfoView.h"
 
+@interface UIView (ViewController)
+
++ (void)printSubviews:(UIView *)view withTab:(NSString *)tab;
+
+@end
+
+
+@implementation UIView (ViewController)
+
++ (void)printSubviews:(UIView *)view withTab:(NSString *)tab {
+    [view.subviews enumerateObjectsUsingBlock:^(id view, NSUInteger idx, BOOL *stop) {
+        NSLog(@"%@%@",tab, view);
+        [UIView printSubviews:view withTab:[tab stringByAppendingString:@"\t"]];
+    }];
+}
+
+@end
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *changeButton;
@@ -22,10 +40,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.yourInfoView = [[YourInfoView alloc] initWithFrame:CGRectMake(0, 20, 320, 320)];
+    self.yourInfoView = [[YourInfoView alloc] initWithFrame:CGRectZero];
     _yourInfoView.backgroundColor = [UIColor lightGrayColor];
     _yourInfoView.nickname = @"기본값";
-    _yourInfoView.width = @(50);
+//    _yourInfoView.width = @(50);
     
 //    NSLog(@"button1 : %@", _yourInfoView.button1);
 //    NSLog(@"change button : %@", self.changeButton);
@@ -34,8 +52,10 @@
     [_yourInfoView.button2 addTarget:self action:@selector(clickButton2:) forControlEvents:UIControlEventTouchUpInside];
     [_yourInfoView.button1 addTarget:self action:@selector(clickButton1:) forControlEvents:UIControlEventTouchUpInside];
 
-//    [_yourInfoView sizeToFit];
+    [_yourInfoView sizeToFit];
     [self.view addSubview:_yourInfoView];
+    
+    [UIView printSubviews:self.view withTab:@""];
     
 //    NSLog(@"main view : %@", _yourInfoView.mainView);
 }

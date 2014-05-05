@@ -1,5 +1,4 @@
 #import <QuartzCore/QuartzCore.h>
-#import <objc/runtime.h>
 #import "TXLayoutView.h"
 
 #pragma mark - UIView Category
@@ -76,10 +75,6 @@
 + (CGFloat)sumSubviewWidth:(UIView *)view;
 + (CGFloat)sumSubviewHeight:(UIView *)view;
 
-+ (void)printSubviews:(UIView *)view withTab:(NSString *)tab;
-
-
-
 @end
 
 @implementation UIView (TXLayout)
@@ -128,13 +123,6 @@
     [UIView resize:view size:CGSizeMake(view.frame.size.width, height)];
 }
 
-+ (void)printSubviews:(UIView *)view withTab:(NSString *)tab {
-    [view.subviews enumerateObjectsUsingBlock:^(id view, NSUInteger idx, BOOL *stop) {
-        NSLog(@"%@%@",tab, view);
-        [UIView printSubviews:view withTab:[tab stringByAppendingString:@"\t"]];
-    }];
-}
-
 + (CGSize)sizeBySizeToFit:(UIView *)view {
     if (view == nil) {
         return CGSizeZero;
@@ -170,64 +158,31 @@
 @end
 
 
-#pragma mark - TXLayoutView
+#pragma mark - TXLayoutViewProperty
 
-@interface TXLayoutView()
+@implementation TXLayoutViewProperty
 
-@property (nonatomic, strong) NSMutableDictionary *propertyViews;
-
-@end
-
-@implementation TXLayoutView
-
-- (void)didAddSubview:(UIView *)subview {
-    [super didAddSubview:subview];
-    
-    [self addObserverForAllProperties];
-}
-
-- (void)willRemoveSubview:(UIView *)subview {
-    [super willRemoveSubview:subview];
-    
-    [self removeObserverForAllProperties];
-}
-
-- (void)sizeToFit {
-    [super sizeToFit];
-    
-    [UIView resize:self width:[UIView sizeBySizeToFit:[self.subviews firstObject]].width];
-    [UIView resize:self height:[UIView sizeBySizeToFit:[self.subviews firstObject]].height];
-    
-}
-
-- (NSDictionary *)propertyViews {
-    if (_propertyViews == nil) {
-        _propertyViews = [[NSMutableDictionary alloc] init];
-    }
-    return _propertyViews;
-}
-
-- (void)setProperties:(NSDictionary *)properties to:(id)view {
++ (void)setProperties:(NSDictionary *)properties to:(id<TXLayoutViewPropertyProtocol>)view context:(id)context {
     [properties enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [self setProperty:obj forKey:key to:view];
+        [TXLayoutViewProperty setProperty:obj forKey:key to:view context:context];
     }];
 }
 
-- (void)setProperty:(id)object forKey:(NSString *)key to:(id<TXLayoutViewPropertyProtocol>)view {
++ (void)setProperty:(id)object forKey:(NSString *)key to:(id<TXLayoutViewPropertyProtocol>)view context:(id)context {
     if ([object isKindOfClass:[NSString class]] && [object characterAtIndex:0] == '@') {
         NSString *varKey = [object substringFromIndex:1];
         
         if ([view isKindOfClass:[TXLayoutContainerView class]] && [key isEqualToString:@"ref"]) {
             TXLayoutContainerView *containerView = (TXLayoutContainerView *)view;
-            [self setValue:[containerView subview] forKey:varKey];
+            [context setValue:[containerView subview] forKey:varKey];
         }
         else if ([view isKindOfClass:[TXLayoutLayoutView class]] && [key isEqualToString:@"ref"]) {
             TXLayoutLayoutView *layoutView = (TXLayoutLayoutView *)view;
-            [self setValue:layoutView forKey:varKey];
+            [context setValue:layoutView forKey:varKey];
         }
         else {
-            [view setProperty:[self valueForKey:varKey] forKey:key];
-            [self addViewForProperty:varKey view:view originalKey:key];
+            [view setProperty:[context valueForKey:varKey] forKey:key];
+            [TXLayoutViewProperty addViewForProperty:varKey view:view originalKey:key propertyViews:[context propertyViews]];
         }
     }
     else {
@@ -235,58 +190,39 @@
     }
 }
 
-- (NSArray *)viewsForProperty:(NSString *)key {
-    return [self.propertyViews valueForKey:key];
-}
-
-- (void)addViewForProperty:(NSString *)varKey view:(id)view originalKey:(NSString *)key {
-    NSMutableArray *views = [self.propertyViews objectForKey:varKey];
++ (void)addViewForProperty:(NSString *)varKey view:(id)view originalKey:(NSString *)key propertyViews:(NSMutableDictionary *)propertyViews {
+    NSMutableArray *views = [propertyViews objectForKey:varKey];
     if (views == nil) {
         views = [[NSMutableArray alloc] init];
-        [self.propertyViews setObject:views forKey:varKey];
+        [propertyViews setObject:views forKey:varKey];
     }
     [views addObject:@{@"view" : view, @"key" : key}];
 }
 
-- (void)draw {
-    if ([self.subviews count] > 0) {
-        [[self.subviews firstObject] resize];
-    }
-    
-    [UIView printSubviews:self withTab:@""];
-}
-
-- (void)addObserverForAllProperties {
++ (void)addObserverForAllProperties:(NSObject *)observer {
     unsigned int outCount;
-    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    objc_property_t *properties = class_copyPropertyList([observer class], &outCount);
     while (outCount--) {
         objc_property_t property = properties[outCount];
+
         if (![self isReadOnlyProperty:property_getAttributes(property)]) {
-            [self addObserver:self forKeyPath:[NSString stringWithFormat:@"%s", property_getName(property)] options:NSKeyValueObservingOptionNew context:nil];
+            [observer addObserver:observer forKeyPath:[NSString stringWithFormat:@"%s", property_getName(property)] options:NSKeyValueObservingOptionNew context:nil];
         }
     }
 }
 
-- (BOOL)isReadOnlyProperty:(const char *)propertyAttributes {
++ (BOOL)isReadOnlyProperty:(const char *)propertyAttributes {
     NSArray *attributes = [[NSString stringWithUTF8String:propertyAttributes] componentsSeparatedByString:@","];
     return [attributes containsObject:@"R"];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    [[self viewsForProperty:keyPath] enumerateObjectsUsingBlock:^(id propertyView, NSUInteger idx, BOOL *stop) {
-        [self setProperty:change[NSKeyValueChangeNewKey] forKey:propertyView[@"key"] to:propertyView[@"view"]];
-    }];
-    
-    [self setNeedsDisplay];
-}
-
-- (void)removeObserverForAllProperties {
++ (void)removeObserverForAllProperties:(NSObject *)observer {
     unsigned int outCount;
     objc_property_t *properties = class_copyPropertyList([self class], &outCount);
     while (outCount--) {
         objc_property_t property = properties[outCount];
         if (![self isReadOnlyProperty:property_getAttributes(property)]) {
-            [self removeObserver:self forKeyPath:[NSString stringWithFormat:@"%s", property_getName(property)] context:nil];
+            [self removeObserver:observer forKeyPath:[NSString stringWithFormat:@"%s", property_getName(property)] context:nil];
         }
     }
 }
@@ -298,6 +234,7 @@
 
 @interface TXLayoutContainerView()
 
+@property (nonatomic, strong) NSMutableDictionary *propertyViews;
 @property (nonatomic, strong) id width;
 @property (nonatomic, strong) id height;
 @property (nonatomic, strong) NSNumber *marginTop;
@@ -308,6 +245,42 @@
 @end
 
 @implementation TXLayoutContainerView
+
+- (id)initWithFrame:(CGRect)rect {
+    self = [super initWithFrame:rect];
+    if(self) {
+        [self setSubview:[[TXLayoutLayoutView alloc] init]];
+        
+        self.autoresizesSubviews = YES;
+        self.clipsToBounds = YES;
+        self.backgroundColor = [UIColor clearColor];
+        
+        [self initTXLayout];
+    }
+    return self;
+}
+
+- (NSMutableDictionary *)propertyViews {
+    if (_propertyViews == nil) {
+        _propertyViews = [[NSMutableDictionary alloc] init];
+    }
+    return _propertyViews;
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+    
+    [self resize];
+}
+
+- (void)sizeToFit {
+    [super sizeToFit];
+    
+    [self resize];
+}
+
+- (void)initTXLayout {
+}
 
 - (void)setWidth:(id)width {
     _width = width;
@@ -335,10 +308,6 @@
 
 + (void)create:(Class)viewClass in:(id)layout return:(void (^)(id))returnBlock {
     TXLayoutContainerView *containerView = [[TXLayoutContainerView alloc] initWithFrame:CGRectZero];
-    containerView.autoresizesSubviews = YES;
-    containerView.clipsToBounds = YES;
-    containerView.width = @"wrap_content";
-    containerView.height = @"wrap_content";
     
     // For Debug
     //    containerView.layer.borderColor = [UIColor redColor].CGColor;
@@ -366,6 +335,7 @@
 }
 
 - (void)resize {
+    
     [self resizeWidth];
     [self resizeHeight];
     
@@ -388,7 +358,7 @@
             [UIView resize:self width:width(((UIWindow *)[UIApplication sharedApplication].windows[0]))];
         }
     }
-    else if ([self.width isEqualToString:@"wrap_content"]) {
+    else { // default wrap_content
         [UIView resize:self width:[UIView sizeBySizeToFit:[self subview]].width];
     }
 }
@@ -405,7 +375,7 @@
             [UIView resize:self height:height(((UIWindow *)[UIApplication sharedApplication].windows[0]))];
         }
     }
-    else if ([self.height isEqualToString:@"wrap_content"]) {
+    else { // default wrap_content
         [UIView resize:self height:[UIView sizeBySizeToFit:[self subview]].height];
     }
 }
@@ -488,6 +458,13 @@
     return [self subviews][0];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    [[self.propertyViews valueForKey:keyPath] enumerateObjectsUsingBlock:^(id propertyView, NSUInteger idx, BOOL *stop) {
+        [TXLayoutViewProperty setProperty:change[NSKeyValueChangeNewKey] forKey:propertyView[@"key"] to:propertyView[@"view"] context:self];
+    }];
+    [self setNeedsDisplay];
+}
+
 @end
 
 
@@ -503,6 +480,9 @@
 @implementation TXLayoutLayoutView
 
 - (void)sizeToFit {
+    [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
+        [view resize];
+    }];
     if ([self.orientation isEqualToString:@"horizontal"]) {
         [UIView resize:self size:CGSizeMake([UIView sumSubviewWidth:self], [UIView maxSubviewHeight:self])];
     }
@@ -516,8 +496,6 @@
     __block CGFloat y = 0;
     
     [self.subviews enumerateObjectsUsingBlock:^(TXLayoutContainerView *view, NSUInteger idx, BOOL *stop) {
-        [view resize];
-        
         [UIView move:view origin:CGPointMake(x, y)];
         if ([self.orientation isEqualToString:@"horizontal"]) {
             x += width(view);

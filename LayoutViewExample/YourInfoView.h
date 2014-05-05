@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "TXLayoutView.h"
 
-@interface YourInfoView : TXLayoutView
+@interface YourInfoView : TXLayoutContainerView
 
 @property (nonatomic, readonly) UIView *mainView;
 @property (nonatomic, strong) NSString *nickname;
