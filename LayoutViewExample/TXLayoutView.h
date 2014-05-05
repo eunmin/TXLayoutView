@@ -1,5 +1,14 @@
 #import <Foundation/Foundation.h>
 
+static const NSString *ref = @"ref";
+static const NSString *width = @"width";
+static const NSString *height = @"height";
+static const NSString *align = @"align";
+static const NSString *marginTop = @"marginTop";
+static const NSString *marginLeft = @"marginLeft";
+static const NSString *marginRight = @"marginRight";
+static const NSString *marginBottom = @"marginBottom";
+
 #define deflayout \
 - (id)initWithFrame:(CGRect)rect { \
 self = [super initWithFrame:rect]; \
@@ -19,12 +28,12 @@ id view = self; \
 #define enddef } \
 
 #define layout(args...) [TXLayoutContainerView create:TXLayoutLayoutView.class in:view return:^(id view){ \
-[self setProperties:[TXLayoutViewPropertyParser parse:@#args] to:view]; \
+[self setProperties:@{args} to:view]; \
 
 #define endlayout }]; \
 
 #define view(class, args...) [TXLayoutContainerView create:class in:view return:^(id view){ \
-[self setProperties:[TXLayoutViewPropertyParser parse:@#args] to:view]; \
+[self setProperties:@{args} to:view]; \
 }]; \
 
 #define label(args...) view(UILabel.class, args) \
@@ -33,9 +42,9 @@ id view = self; \
 
 #define image(args...) view(UIImageView.class, args) \
 
-#define vertical_layout(args...) layout(orientation = "vertical", args) \
+#define vertical_layout(args...) layout(@"orientation" : @"vertical", args) \
 
-#define horizontal_layout(args...) layout(orientation = "horizontal", args) \
+#define horizontal_layout(args...) layout(@"orientation" : @"horizontal", args) \
 
 
 #pragma mark - TXLayoutViewPropertyProtocol
@@ -44,15 +53,6 @@ id view = self; \
 
 - (id)property:(NSString *)key;
 - (void)setProperty:(id)object forKey:(NSString *)key;
-
-@end
-
-
-#pragma mark - TXLayoutViewPropertyParser
-
-@interface TXLayoutViewPropertyParser : NSObject
-
-+ (NSDictionary *)parse:(NSString *)propertiesString;
 
 @end
 

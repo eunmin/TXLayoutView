@@ -25,7 +25,7 @@
     self.yourInfoView = [[YourInfoView alloc] initWithFrame:CGRectMake(0, 20, 320, 320)];
     _yourInfoView.backgroundColor = [UIColor lightGrayColor];
     _yourInfoView.nickname = @"기본값";
-    _yourInfoView.width = 50;
+    _yourInfoView.width = @(50);
     
 //    NSLog(@"button1 : %@", _yourInfoView.button1);
 //    NSLog(@"change button : %@", self.changeButton);
@@ -50,7 +50,7 @@
 
 - (IBAction)changeText:(id)sender {
     self.yourInfoView.nickname = @"바뀐값 값 크기도 바켜라!!!!";
-    self.yourInfoView.width = 300;
+    self.yourInfoView.width = @(300);
     [self.yourInfoView.button1 setTitle:@"버튼1" forState:UIControlStateNormal];
 }
 

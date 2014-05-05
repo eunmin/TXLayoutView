@@ -5,7 +5,7 @@
 
 @property (nonatomic, readonly) UIView *mainView;
 @property (nonatomic, strong) NSString *nickname;
-@property (nonatomic) CGFloat width;
+@property (nonatomic, strong) NSNumber *width;
 @property (nonatomic, readonly) UIButton *button1;
 @property (nonatomic, readonly) UIButton *button2;
 @property (nonatomic, readonly) UILabel *titleLabel;

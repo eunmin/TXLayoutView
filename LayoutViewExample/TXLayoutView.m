@@ -170,38 +170,6 @@
 @end
 
 
-#pragma mark - TXLayoutViewPropertyParser
-
-@implementation TXLayoutViewPropertyParser
-
-+ (NSDictionary *)parse:(NSString *)propertiesString {
-    NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
-    
-    NSArray *properties = [propertiesString componentsSeparatedByString:@","];
-    [properties enumerateObjectsUsingBlock:^(NSString *property, NSUInteger idx, BOOL *stop) {
-        NSArray *keyValue = [[property trim] componentsSeparatedByString:@"="];
-        [result setObject:[self parseValue:[keyValue[1] trim]] forKey:[keyValue[0] trim]];
-    }];
-    
-    return result;
-}
-
-+ (NSObject *)parseValue:(NSString *)value {
-    if ([value hasPrefix:@"\""]) {
-        return [value stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
-    }
-    else if(isdigit([value characterAtIndex:0])) {
-        return @([value floatValue]);
-    }
-    else {
-        return value;
-    }
-    return value;
-}
-
-@end
-
-
 #pragma mark - TXLayoutView
 
 @interface TXLayoutView()
