@@ -1,5 +1,21 @@
 # TXLayoutView
 iOS를 위한 안드로이드 스타일의 가변 레이아웃
+```objective-c
+#import <UIKit/UIKit.h>
+#import "TXLayoutView.h"
+
+@interface YourInfoView : TXLayoutContainerView
+
+@property (nonatomic, readonly) UIView *mainView;
+@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, strong) NSNumber *width;
+@property (nonatomic, readonly) UIButton *button1;
+@property (nonatomic, readonly) UIButton *button2;
+@property (nonatomic, readonly) UILabel *titleLabel;
+@property (nonatomic) BOOL isShow;
+
+@end
+```
 
 ```objective-c
 #import "YourInfoView.h"
